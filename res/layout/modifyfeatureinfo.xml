@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+
+    <TextView
+        android:id="@+id/tv_modifyfeatureinfo_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="编辑属性" />
+
+    <LinearLayout
+        android:id="@+id/ll_modifyfeatureinfo_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/btn_modifyfeatureinfo_cancel"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="@drawable/cancelbutton"
+            android:text="取   消"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_modifyfeatureinfo_ok"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/cancelbutton"
+            android:text="确   定"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_modifyfeatureinfo_btns"
+        android:layout_below="@id/tv_modifyfeatureinfo_title">
+
+        <LinearLayout
+            android:id="@+id/ll_modifyfeatureinfo_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

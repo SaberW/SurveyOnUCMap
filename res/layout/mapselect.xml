@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:columnCount="2"
+    android:rowCount="4" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="0"
+        android:src="@drawable/dt" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_column="1"
+        android:layout_gravity="left|center_vertical"
+        android:layout_row="0"
+        android:text="线路图" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+                android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="1"
+        android:src="@drawable/dx" />
+<TextView
+        android:id="@+id/textView2"
+        android:layout_column="1"
+        android:layout_gravity="left|center_vertical"
+        android:layout_row="1"
+        android:text="地形图" />
+    <ImageView
+        android:id="@+id/imageView3"
+                android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="2"
+        android:src="@drawable/yx" />
+<TextView
+        android:id="@+id/textView3"
+        android:layout_column="1"
+        android:layout_gravity="left|center_vertical"
+        android:layout_row="2"
+        android:text="地形图" />
+</GridLayout>

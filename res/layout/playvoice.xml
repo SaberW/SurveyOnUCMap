@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#696969"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_playvoice_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#6495ED">
+
+        <Button
+            android:id="@+id/btn_playvoice_delete"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/cancelbutton"
+            android:drawableLeft="@drawable/plugindelete"
+            android:text="删   除"
+            android:textColor="#ffffffff"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_playvoice_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/btn_playvoice_delete"
+            android:drawableLeft="@drawable/back"
+            android:paddingLeft="5dip"
+            android:text="音频播放"
+            android:textColor="#FFfdfdfd"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_playvoice_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_playvoice_top"
+        android:layout_margin="5dip"
+        android:text="文件名称:"
+        android:textColor="#FFfdfdfd" />
+
+    <RelativeLayout
+        android:id="@+id/rl_playvoice_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="130dip"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_gray_bg" />
+
+        <ImageView
+            android:id="@+id/iv_playvoice_recorder"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/record_round_blue_bg" />
+
+        <ImageView
+            android:id="@+id/iv_playvoice_play"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/record_audio_play" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_playvoice_bottom"
+        android:layout_below="@id/tv_playvoice_filename"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_playvoice_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#FFfdfdfd"
+                android:textSize="45sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="#FFfdfdfd"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_playvoice_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#FFfdfdfd"
+                android:textSize="45sp" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/sb_playvoice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:padding="0dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/seekbar_bg"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="0dp" />
+    </LinearLayout>
+</RelativeLayout>

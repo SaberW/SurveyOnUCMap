@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#6495ED">
+
+        <Button
+            android:id="@+id/btn_showphoto_delete"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/cancelbutton"
+            android:drawableLeft="@drawable/plugindelete"
+            android:text="删   除"
+            android:textColor="#ffffffff"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_showphoto_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/btn_showphoto_delete"
+            android:drawableLeft="@drawable/back"
+            android:paddingLeft="5dip"
+            android:text="照片预览"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:id="@+id/ssiv_showphoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#696969">
+
+    <TextView
+        android:id="@+id/tv_recorder_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentTop="true"
+        android:background="#6495ED"
+        android:drawableLeft="@drawable/back"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip"
+        android:text="录音"
+        android:textColor="#FFfdfdfd"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_recorder_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_recorder_title"
+        android:layout_margin="5dip"
+        android:text="文件名称:"
+        android:textColor="#FFfdfdfd" />
+
+    <LinearLayout
+        android:id="@+id/ll_blurecorderview_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_record_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/recrod_reset_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_record_icon_reset" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="重录"
+                android:textColor="#FFfdfdfd"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_recorder_mc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_gray_bg" />
+
+            <ImageView
+                android:id="@+id/iv_recorder_recorder"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/record_round_blue_bg" />
+
+            <ImageView
+                android:id="@+id/iv_recorder_play"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/record_audio_play"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_record_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/recrod_complete_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_record_icon_complete" />
+
+            <TextView
+                android:id="@+id/record_complete_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="完成"
+                android:textColor="#FFfdfdfd"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_record_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_blurecorderview_bottom"
+        android:layout_below="@id/tv_recorder_filename">
+
+        <TextView
+            android:id="@+id/tv_recorder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00"
+            android:textColor="#FFfdfdfd"
+            android:textSize="100sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_listen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_recorder_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#FFfdfdfd"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:id="@+id/tv_recorder_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#FFfdfdfd"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:id="@+id/tv_recorder_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#FFfdfdfd"
+                    android:textSize="45sp" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sb_recorder"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="4dp"
+                android:minHeight="4dp"
+                android:padding="0dp"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="0dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

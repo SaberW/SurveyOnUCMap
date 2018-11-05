@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e1e1e1">
+
+        <ImageView
+            android:id="@+id/iv_dtss_close"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/closemenu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="地图搜索" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索图层:" />
+
+        <cn.creable.surveyOnUCMap.UnderLineTextView
+            android:id="@+id/tv_dtss_layername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingBottom="2dip"
+            android:text="请选择要搜索的图层"
+            android:textColor="#909090"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索字段:" />
+
+        <cn.creable.surveyOnUCMap.UnderLineTextView
+            android:id="@+id/tv_dtss_searchcolumnname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingBottom="2dip"
+            android:text="请选择要搜索的字段"
+            android:textColor="#909090"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示字段:" />
+
+        <cn.creable.surveyOnUCMap.UnderLineTextView
+            android:id="@+id/tv_dtss_showcolumnname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingBottom="2dip"
+            android:text="请选择要显示的字段"
+            android:textColor="#909090"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            android:id="@+id/tv_dtss_ss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="查 询"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_dtss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/tv_dtss_ss"
+            android:background="@drawable/edittext_background"
+            android:hint="输入关键字查询"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:background="#e1e1e1">
+
+        <TextView
+            android:id="@+id/tv_dtss_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="清 空"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="地图要素列表"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <com.kennyc.view.MultiStateView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/msv_dtss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_animateViewChanges="true"
+        app:msv_emptyView="@layout/empty_view"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="empty">
+
+        <ListView
+            android:id="@+id/lv_dtss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DADBDA"
+            android:dividerHeight="1px"
+            android:fadingEdge="none" />
+    </com.kennyc.view.MultiStateView>
+</LinearLayout>

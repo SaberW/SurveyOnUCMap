@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <Button
+        android:id="@+id/btn_modifyfeatureinfo_photos"
+        android:layout_width="60dip"
+        android:layout_height="40dip"
+        android:background="@drawable/okbutton"
+        android:text="拍 照"
+        android:textColor="#ffffffff"
+        android:textSize="20sp" />
+
+    <cn.creable.surveyOnUCMap.HorizontalListView
+        android:id="@+id/hlv_modifyfeatureinfo_photo"
+        android:layout_width="match_parent"
+        android:layout_height="70dip" />
+</LinearLayout>

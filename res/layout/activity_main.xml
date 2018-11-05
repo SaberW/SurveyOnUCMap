@@ -1,0 +1,194 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip">
+
+        <TextView
+            android:id="@+id/tv_main_qt"
+            android:layout_width="70dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/listview_item_pressed_style"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="全 图"
+            android:textColor="#ff000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_main_gj"
+            android:layout_width="70dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/listview_item_pressed_style"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="外业采集"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="外调助手"
+            android:textColor="#ff000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            android:background="#E1E1E1" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="71dip"
+        android:layout_marginTop="40dip"
+        android:orientation="horizontal">
+
+        <cn.creable.ucmap.openGIS.UCMapView
+            android:id="@+id/mv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_menu"
+        android:layout_width="250dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="71dip"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/background"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_main_menu"
+        android:layout_width="70dip"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dip"
+        android:divider="#DADBDA"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <ImageView
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="70dip"
+        android:layout_marginTop="40dip"
+        android:background="#E1E1E1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- <ImageView
+            android:id="@+id/iv_main_jp"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/jp" />
+
+        <ImageView
+            android:id="@+id/iv_main_dw"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_above="@id/iv_main_jp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/dw" />
+
+        <ImageView
+            android:id="@+id/iv_main_ll"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_above="@id/iv_main_dw"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/dtll" /> -->
+
+        <RelativeLayout
+            android:id="@+id/rl_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="80dip"
+            android:layout_marginRight="80dip"
+            android:visibility="gone">
+
+           <cn.creable.surveyOnUCMap.HorizontalListView
+                android:id="@+id/hlv_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/out_view_backgroud" />
+
+           <com.github.johnkil.print.PrintView
+                android:id="@+id/pv_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:print_iconColor="@color/red"
+                app:print_iconSize="30dp"
+                app:print_iconText="@string/ic_cancel" />
+            <!-- <ImageView
+            android:id="@+id/pv_main"
+           android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+            android:src="@drawable/closetoolbar" /> -->
+        </RelativeLayout>
+        
+        <com.anlia.expandmenu.widget.HorizontalExpandMenu
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true">
+                <TextView android:id="@+id/tv_maptype1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="线路"/>
+                <TextView android:id="@+id/tv_maptype2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="地形"/>
+                <TextView android:id="@+id/tv_maptype3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="卫星"/>
+            </LinearLayout>
+        </com.anlia.expandmenu.widget.HorizontalExpandMenu>
+    </RelativeLayout>
+</FrameLayout>
