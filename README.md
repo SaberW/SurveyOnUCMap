@@ -13,3 +13,7 @@
 所以，用户不用关心影像的坐标系问题；三、数据采集，出于对精度的要求，这里采用“打点”模式来绘制点、线、面，“手绘”模式适用于对精度要求不高的数据采集；
 除此之外，用户可以根据自己的需求来修改和扩展定制；
 ![Image text](https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic1.png)
+![Image text](https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic2.png)
+![Image text](https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic3.png)
+![Image text](https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic4.png)
+![Image text](https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic5.png)
