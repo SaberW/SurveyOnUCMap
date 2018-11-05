@@ -12,4 +12,4 @@
 然后将处理好的MBTiles文件拷贝到存储卡根目录下即可，这里，对影像的坐标系没有特别的要求，UCMap提供的切片工具会自动将其他坐标系转成经纬度，
 所以，用户不用关心影像的坐标系问题；三、数据采集，出于对精度的要求，这里采用“打点”模式来绘制点、线、面，“手绘”模式适用于对精度要求不高的数据采集；
 除此之外，用户可以根据自己的需求来修改和扩展定制；
-![Image text](SurveyOnUCMap/img-folder/pic1.png)
+![Image text](https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic1.png)
